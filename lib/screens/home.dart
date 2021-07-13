@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/components/bottom_bar.dart';
 import 'package:instagram/components/publication_list.dart';
-import 'package:instagram/components/top_bar.dart';
+import 'package:instagram/components/main_top_bar.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -9,9 +9,12 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: SizedBox(
-            height: 45.0,
-            child: Image.asset('assets/images/ig.png')
-          ),
+          height: 45.0,
+          child: Image.asset('assets/images/ig.png')
+        ),
+
+        automaticallyImplyLeading: false,
+        elevation: 0,
 
         actions: <Widget>[
           TopBar()
@@ -19,7 +22,6 @@ class Home extends StatelessWidget {
       ),
 
       body: PublicationList(),
-
       bottomNavigationBar: BottomBar()
     );
   }
