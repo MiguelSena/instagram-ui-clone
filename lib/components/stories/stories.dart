@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/components/stories_component.dart';
+import 'package:instagram/components/stories/stories_component.dart';
 
 class Stories extends StatelessWidget {
   @override

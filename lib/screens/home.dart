@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/components/bottom_bar.dart';
-import 'package:instagram/components/publication_list.dart';
+import 'package:instagram/components/publication/publication_list.dart';
 import 'package:instagram/components/main_top_bar.dart';
 
 class Home extends StatelessWidget {

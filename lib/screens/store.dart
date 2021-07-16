@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/components/bottom_bar.dart';
-import 'package:instagram/components/store_search.dart';
+import 'package:instagram/components/store/product.dart';
+import 'package:instagram/components/store/store_search.dart';
 import 'package:instagram/models/custom_icon.dart';
 
 class Store extends StatelessWidget {
@@ -24,7 +25,12 @@ class Store extends StatelessWidget {
         ],
       ),
 
-      body: StoreSearch(),
+      body: ListView.builder(
+        itemCount: 9,
+        itemBuilder: (context, index) {
+          return index == 0 ? StoreSearch() : Product();
+        }
+      ),
       
       bottomNavigationBar: BottomBar(),
     );
