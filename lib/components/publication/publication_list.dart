@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram/components/publication/publication.dart';
 import 'package:instagram/components/stories/stories.dart';
 
-class PublicationList extends StatelessWidget {
+class   PublicationList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
