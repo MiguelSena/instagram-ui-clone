@@ -3,7 +3,7 @@ import 'package:instagram/components/bottom_bar.dart';
 import 'package:instagram/models/custom_icon.dart';
 
 class ProductPage extends StatelessWidget {
-  final List itens = [Pictures(), Title()];
+  final List itens = [Pictures(), Title(), Details(), More()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -145,6 +145,138 @@ class Title extends StatelessWidget {
           )
         )
       ]
+    );
+  }
+}
+
+class Details extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        Container(
+          height: MediaQuery.of(context).size.height * 0.007,
+          width: MediaQuery.of(context).size.width,
+          color: Colors.grey[300],
+        ),
+
+        Container(
+          height: MediaQuery.of(context).size.height * 0.07,
+          width: MediaQuery.of(context).size.width,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text('Detalhes', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0)), 
+                IconButton(
+                  icon: Icon(Icons.arrow_downward),
+                  onPressed: () {}
+                )
+              ]
+            ),
+          ),
+        ),
+
+        Container(
+          height: MediaQuery.of(context).size.height * 0.007,
+          width: MediaQuery.of(context).size.width,
+          color: Colors.grey[300],
+        ),
+      ]
+    );
+  }
+}
+
+class More extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            height: MediaQuery.of(context).size.height * 0.07,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text('Mais desta loja', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0)),
+                InkWell(
+                  onTap: () {},
+                  child: Text('Ver mais', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0, color: Colors.blue))
+                )
+              ]
+            ),
+          ),
+        ),
+
+        Column(
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                MoreImages(),
+                MoreImages(),
+              ]
+            ),
+
+            Row(
+              children: <Widget>[
+                MoreImages(),
+                MoreImages(),
+              ]
+            ),
+          ],
+        )
+      ]
+    );
+  }
+}
+
+class MoreImages extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final double size = (MediaQuery.of(context).size.width / 2) - 16.0;
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: <Widget>[
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.transparent),
+              borderRadius: BorderRadius.all(Radius.circular(10))
+            ),
+
+            height: size,
+            width: size,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10.0),
+              child: Image.network('https://cdn.discordapp.com/attachments/787057736818360375/866151024489922580/java_script.png')
+            )
+          ),
+
+          Padding(
+            padding: EdgeInsets.only(left: 8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(
+                  'JavaScript',
+                  style: TextStyle(fontSize: 16.0)
+                ),
+                IconButton(
+                  icon: Icon(Icons.turned_in_not),
+                  onPressed: () {}
+                )
+              ]
+            )
+          ),
+
+          Padding(
+            padding: EdgeInsets.only(left: 8.0),
+            child: Text(r'R$ 599,99', style: TextStyle(color: Colors.blue, fontSize: 16.0))
+          )
+        ]
+      ),
     );
   }
 }
