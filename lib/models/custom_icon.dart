@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
 class CustomIcon extends StatelessWidget {
-  final IconData icon;
+  final IconData _icon;
+  final Function onTap;
 
-  CustomIcon(this.icon);
+  CustomIcon(this._icon, {this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Icon(icon),
+    return IconButton(
+      icon: Icon(_icon),
+      onPressed: () {}
     );
   }
 }

@@ -12,10 +12,7 @@ class ProductPage extends StatelessWidget {
         elevation: 0,
 
         actions: <Widget>[
-          IconButton(
-            icon: CustomIcon(Icons.more_vert),
-            onPressed: () {}
-          )
+          CustomIcon(Icons.more_vert)
         ]
       ),
 
@@ -72,16 +69,9 @@ class Title extends StatelessWidget {
               Container(
                 child: Row(
                   children: <Widget>[
-                    IconButton(
-                      icon: Icon(Icons.turned_in_not),
-                      onPressed: () {}
-                    ),
-
-                    IconButton(
-                      icon: Icon(Icons.send),
-                      onPressed: () {}
-                    )
-                  ],
+                    CustomIcon(Icons.turned_in_not),
+                    CustomIcon(Icons.send)
+                  ]
                 )
               )
             ],
@@ -169,10 +159,7 @@ class Details extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text('Detalhes', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0)), 
-                IconButton(
-                  icon: Icon(Icons.arrow_downward),
-                  onPressed: () {}
-                )
+                CustomIcon(Icons.arrow_downward)
               ]
             ),
           ),
@@ -263,10 +250,7 @@ class MoreImages extends StatelessWidget {
                   'JavaScript',
                   style: TextStyle(fontSize: 16.0)
                 ),
-                IconButton(
-                  icon: Icon(Icons.turned_in_not),
-                  onPressed: () {}
-                )
+                CustomIcon(Icons.turned_in_not)
               ]
             )
           ),
