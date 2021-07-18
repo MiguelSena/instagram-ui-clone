@@ -12,7 +12,7 @@ class ProductPage extends StatelessWidget {
         elevation: 0,
 
         actions: <Widget>[
-          CustomIcon(Icons.more_vert)
+          CustomIcon(Icons.more_vert, onClick: () {})
         ]
       ),
 
@@ -60,7 +60,7 @@ class Title extends StatelessWidget {
               Container(
                 child: Row(
                   children: <Widget>[
-                    CustomIcon(Icons.account_box_outlined),
+                    CustomIcon(Icons.account_box_outlined, onClick: () {}),
                     Text('_sena.miguel')
                   ]
                 ),
@@ -69,8 +69,8 @@ class Title extends StatelessWidget {
               Container(
                 child: Row(
                   children: <Widget>[
-                    CustomIcon(Icons.turned_in_not),
-                    CustomIcon(Icons.send)
+                    CustomIcon(Icons.turned_in_not, onClick: () {}),
+                    CustomIcon(Icons.send, onClick: () {})
                   ]
                 )
               )
@@ -159,7 +159,7 @@ class Details extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text('Detalhes', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0)), 
-                CustomIcon(Icons.arrow_downward)
+                CustomIcon(Icons.arrow_downward, onClick: () {})
               ]
             ),
           ),
@@ -250,7 +250,7 @@ class MoreImages extends StatelessWidget {
                   'JavaScript',
                   style: TextStyle(fontSize: 16.0)
                 ),
-                CustomIcon(Icons.turned_in_not)
+                CustomIcon(Icons.turned_in_not, onClick: () {})
               ]
             )
           ),

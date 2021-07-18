@@ -13,15 +13,12 @@ class Store extends StatelessWidget {
         automaticallyImplyLeading: false,
         elevation: 0,
         actions: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(right: 15.0),
-            child: Row(
+          Row(
               children: [
-                CustomIcon(Icons.calendar_today),
-                CustomIcon(Icons.dehaze),
+                CustomIcon(Icons.calendar_today, onClick: () {}),
+                CustomIcon(Icons.dehaze, onClick: () {}),
               ]
             ),
-          )
         ],
       ),
 

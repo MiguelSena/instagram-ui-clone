@@ -31,13 +31,13 @@ class Publication extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                CustomIcon(Icons.favorite_border_outlined),
-                CustomIcon(Icons.comment_outlined),
-                CustomIcon(Icons.send)
+                CustomIcon(Icons.favorite_border_outlined, onClick: () {}),
+                CustomIcon(Icons.comment_outlined, onClick: () {}),
+                CustomIcon(Icons.send, onClick: () {})
               ]
             ),
 
-            CustomIcon(Icons.turned_in_not)
+            CustomIcon(Icons.turned_in_not, onClick: () {})
           ],
         ),
 
